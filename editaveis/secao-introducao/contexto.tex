@@ -1,0 +1,59 @@
+\section{Contexto}
+
+O Governo Federal Brasileiro incentiva os órgãos públicos a transformarem seus serviços em serviços digitais. Algumas das iniciativas estão relacionadas à publicação de estratégias e decretos que buscam concretizar o uso de tecnologias digitais como uma estratégia de modernização de determinados setores. Alguns exemplos são: a criação de uma plataforma digital, a criação de um kit para transformação de serviços em serviços digitais, a oferta de uma solução tecnológica para a digitização de serviços, entre outros. 
+
+Em 2017, o antigo Ministério do Planejamento, Gestão e Desenvolvimento (MP), atualmente compondo o Ministério da Economia (ME), lançou o programa de \textit{Transformação de Serviços Públicos} denominado \textit{Kit de Transformação}. O Kit é composto de seis fases independentes entre si: \textit{Questione}, \textit{Personalize}, \textit{Reinvente}, \textit{Facilite}, \textit{Integre} e \textit{Comunique}~\cite{BRASIL2017}. O principal objetivo do Kit é simplificar o acesso a determinados serviços e ofertas, a partir da perspectiva dos cidadãos e das empresas.
+
+Nesse cenário, a Universidade de Brasília (UnB), por meio do \textit{Information Technology Research and Application Center} (ITRAC), laboratório que promove pesquisas e desenvolvimentos na área de TI, contribui com o Ministério da Economia (ME) no apoio ao Kit de Transformação. A parceria entre as duas instituições envolve a definição de um processo de transformação de serviços públicos, com a inserção de atividades de desenvolvimento e de qualidade de software.
+
+O presente trabalho está relacionado à fase \textit{Facilite}. Essa fase provê recursos e ferramentas para apoiar os órgãos federais a simplificar e digitizar seus serviços a partir de uma solução tecnológica.
+
+No ITRAC foi definido um processo de digitização de serviços governamentais, que faz uso de uma ferramenta baseada numa abordagem de \textit{meta-design}~\cite{fogli2012meta}, que utiliza modelagem de processos e configuração gráfica dos campos envolvidos para transformação dos serviços governamentais. Esta ferramenta foi adotada pelo ME, via terceirização, e possibilita um processo de desenvolvimento descentralizado que dá celeridade ao processo de transformação digital no governo brasileiro. O processo de transformação envolve o emprego de técnicas que vão desde a análise do serviço, passando por elicitação dos requisitos, mapeamento do processo envolvido no serviço analisado e construção do mesmo na ferramenta de \textit{meta-design}. O processo de transformação envolve, ainda, atividades de \textit{verificação} e \textit{validação} do serviço digitizado, buscando garantir a qualidade do produto que será entregue a população.
+
+Para o processo de verificação e validação dos serviços transformados, as atividades de testes dependem fortemente dos requisitos dos serviços transformados. Contudo, muitas vezes, os requisitos inexistem ou estão instáveis, isso é, os requisitos fornecidos pelos órgãos não são concisos. 
+
+A problemática de se testar sem requisitos está presente neste trabalho, visto que os serviços digitizados não possuem uma documentação formal de requisitos e o código-fonte não é acessível à equipe de teste, o que dificulta a extração de informações. Tais restrições são decorrentes da forma de contratação definida pelo ME, via licitação pública, na qual, a empresa terceirizada, não é obrigada a entregar a documentação, código-fonte, e os testes realizados durante o desenvolvimento do serviço digitizado. 
+
+% \del{Não sei se isso é verdade. Se for, acho que vale a pena incluir}.
+
+Segundo Barr et. al.,~\cite{barr2015oracle} requisitos instáveis ou inexistentes podem fazer com que os testadores se deparem com o Problema do Oráculo, ou seja, um cenário de difícil identificação do comportamento correto do serviço digitizado, dificultando a comparação entre o comportamento obtido e o comportamento esperado durante a execução dos casos de teste.
+
+No ITRAC foi desenvolvido um processo de validação sistematizado, com o intuito de garantir a qualidade da digitização dos serviços. Dado que o código-fonte do serviço não está disponível, o processo emprega a técnica de Teste Exploratório, sugerido por~\cite{whittaker2009exploratory}. 
+
+Essa abordagem possibilita que o testador não dependa de um conjunto de teste pré-projetados e utilize-se da Metáfora do Turista, também proposta por~\cite{whittaker2009exploratory}, como uma estratégia para guiar, a partir das chamadas \textit{``tours''}, a criação e execução dos casos de teste, facilitando, ainda, a extração de requisitos e regras de negócio a partir da exploração do software analisado.
+
+Vale ressaltar que a utilização dos \textit{Testes Exploratórios}, com a  \textit{Metáfora do Turista}, depende da imaginação,  personalidade e conhecimento dos envolvidos na atividade de teste~\cite{itkonen2012role}. Isso se dá, devido ao quesito humano envolvido na atividade de Teste Exploratório, conforme destacado por~\cite{whittaker2009exploratory}.
+
+Dessa forma, supõe-se que o perfil do testador tenha algum impacto na aplicação das \textit{tours} utilizadas na metáfora do turista proposta por~\cite{whittaker2009exploratory}, visto que os casos de teste gerados e suas sequências variam muito a depender do testador. O entendimento desse perfil e suas principais características podem trazer benefícios para a equipe de testes.
+
+Entre os benefícios envolvidos, pode-se destacar a atividade de \textit{Atribuição de tarefas de teste para testadores.}
+Normalmente, as tarefas de teste são alocados por gerentes para que sejam seguidas pelos testadores que estiverem disponíveis em determinado momento. Em vista disso, uma das formas de se maximizar a produtividade em uma equipe de testes é alocar tarefas de acordo com o perfil de testadores~\cite{miranda2012recommender}. Entretanto, a Atribuição de tarefas de forma manual não é trivial visto que, em grandes empresas, os gerentes de teste são responsáveis por alocar grande número de tarefas para vários testadores. No contexto do presente trabalho, as tarefas de teste a serem atribuídas dizem respeito aos tours do Teste Exploratório.
+
+Um dos possíveis minimizadores desse desafio de atribuição de tours é o emprego dos sistemas de recomendação para alocar tarefas a perfis específicos baseado em análises de alocações anteriores, 
+como mostram os trabalhos de~\cite{anvik2006should} e~\cite{miranda2012recommender}.
+
+Esse novo  emprego dos sistemas de recomendação motiva este trabalho, visto que o desenvolvimento de um sistema de recomendação poderá auxiliar na \textit{atribuição de tours} para uma equipe de testadores, buscando maximizar a eficiência deles e contribuir com grandes equipes.
+
+% Através do advento da evolução da tecnologia e expansão da internet surge a expressão \textit{Governo Digital},
+% que se refere ao uso de tecnologias digitais como uma estratégia de modernização de um Governo, que adota a tecnologia
+% da informação e comunicação (TIC) para prover serviços~\cite{fang2002government}. O termo \textit{e-Gov} surgiu no final da década de 1990 e cresceu a um tamanho considerável desde então. Nos últimos
+% anos, deu origem a várias conferências de cunho científico, aumentando seu conteúdo e posição no que se refere a outros
+% campos de pesquisa e disciplinas~\cite{gronlund2005introducing}.
+
+% No Brasil, embora as medidas de modernização do setor público tenham começado a ser adotadas na década de 70, as ênfases se deram
+% apenas com a crise fiscal dos anos 80, onde a intervenção estatal ficou conhecida como reforma da gestão pública que, aliada as
+% TICs, proporcionou com que os governos no Brasil oferecessem serviços públicos eletrônicos à população no início da década de
+% 2000~\cite{przeybilovicz2015desenvolvimento}.
+
+
+
+% Em vista deste cenário de digitalização do serviço público, é de suma importância garantir a qualidade dos serviços digitalizados
+% devido aos efeitos nos domínios nacionais e internacionais. De acordo com~\cite{myers2004art}, é preciso que as características
+% dos projetos sejam levadas em consideração no momento de definição da estratégia de teste para assegurar que a verificação e
+% a validação sejam economicamente viáveis, analisando a complexidade e quantidade de caminhos envolvidos para que se atinja a
+% qualidade desejada.
+
+
+
+
+
